@@ -3,8 +3,8 @@ import AvailablePlayers from "./Componentss/available-selected/AvailablePlayers"
 import NavBar from "./Componentss/Navbar/NavBar";
 import AllPlayers from "./Componentss/AllPlayers/AllPlayers";
 import Modal from "./Componentss/Navbar/Modal";
-import SelectedPlayer from "./Componentss/SelectedPlayer/SelectedPlayer";
 import Footer from "./Componentss/Footer/Footer";
+import SelectedPlayers from "./Componentss/SelectedPlayer/Selectedplayers";
 
 
 const App = () => {
@@ -33,7 +33,7 @@ const [selectPlayer, setSelectPlayer] = useState([])
 
   const handleCoin = ()=>{
     
-      setCoins(coin + 12345600)
+      setCoins(coin + 123456000)
       alert('Credit Added to Your Account')
   }
 
@@ -42,7 +42,9 @@ const [selectPlayer, setSelectPlayer] = useState([])
      if(!isExist){
       const newSelectedPlayer = [...selectPlayer, player];
       setSelectPlayer(newSelectedPlayer)
-      console.log('select',newSelectedPlayer)
+      
+     }else{
+      alert('player exist already .')
      }
   }
 
@@ -55,7 +57,8 @@ const [selectPlayer, setSelectPlayer] = useState([])
      isActive={isActive}
 ></AvailablePlayers >
 <AllPlayers handleSelectedPlayer={handleSelectedPlayer} selectPlayer={selectPlayer}></AllPlayers>
-<SelectedPlayer selectPlayer={selectPlayer} ></SelectedPlayer>
+
+<SelectedPlayers selectPlayer={selectPlayer} ></SelectedPlayers>
 <Footer></Footer>
     </div>
   );

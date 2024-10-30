@@ -22,7 +22,7 @@ const AllPlayer = ({allPlayer, handleSelectedPlayer, selectPlayer}) => {
     </div>
     <div className="flex justify-between">
         <p>Price: ${price}</p>
-        <button onClick={() => handleSelectedPlayer(selectPlayer)} className="btn1">Choose Player</button>
+        <button onClick={() => handleSelectedPlayer(allPlayer)} className="btn1">Choose Player</button>
     </div>
    
 </div>

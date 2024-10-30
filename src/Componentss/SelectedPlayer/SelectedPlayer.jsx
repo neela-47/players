@@ -1,11 +1,14 @@
-
-const SelectedPlayer = ({selectPlayer}) => {
-    console.log(selectPlayer)
-    const{ image, name} = selectPlayer
+const SelectedPlayer = ({player}) => {
+    console.log(player)
+    const[image, name] = player
     return (
         <div>
             <p>Selected image</p>
-            <img src={image} alt="" />
+           <div>
+            <div>
+            <img src={player.image} alt="" />
+            </div>
+           </div>
         </div>
     );
 };
